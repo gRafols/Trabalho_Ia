@@ -5,14 +5,11 @@ import joblib
 import uuid
 import os
 
-knn = joblib.load("reconhecimento_facial.pkl")  # Arquivo que você exportou do Colab
+knn = joblib.load("reconhecimento_facial.pkl") 
 threshold = 20
 def prever_imagem(img_path):
     try:
-        # Extrai o embedding
         embedding = DeepFace.represent(img_path=img_path, model_name="Facenet512", enforce_detection=False)[0]["embedding"]
-
-        # Verifica distância ao vizinho mais próximo
         distances, _ = knn.kneighbors([embedding], n_neighbors=1)
         distancia = distances[0][0]
         pred = knn.predict([embedding])[0]
