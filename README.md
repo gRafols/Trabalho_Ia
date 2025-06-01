@@ -17,4 +17,4 @@ Apos instalar as dependencias, rode o bot localmente com:
     python3 bot.py
 A partir de agora ele ira responder no Telegram
 
-Para encontrar no telegram pesquise por GabrielBonettiUFMS_bot
+Para encontrar, pesquise por GabrielBonettiUFMS_bot
